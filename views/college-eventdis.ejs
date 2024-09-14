@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= college.collegeName %> Events</title>
+  <link rel="stylesheet" href="/css/college-eventdis.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact Us</a>
+      <a href="/profile">Profile</a>
+      <a href="/signout">Sign Out</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>Events for <%= college.collegeName %></h1>
+    <ul>
+      <% events.forEach(event => { %>
+        <li>
+          <h2><%= event.name %></h2>
+          <p><strong>Type:</strong> <%= event.type %></p>
+          <p><strong>Subject:</strong> <%= event.subject %></p>
+          <p><strong>Location:</strong> <%= event.location %></p>
+          <p><strong>Eligibility:</strong> <%= event.eligibility %></p>
+          <p><strong>Registration Fee:</strong> <%= event.registrationfee %></p>
+          <p><strong>Prizes:</strong> <%= event.prizes %></p>
+          <p><strong>Date:</strong> <%= new Date(event.date).toLocaleDateString() %></p>
+          <p><strong>Description:</strong> <%= event.description %></p>
+          
+          <% if (event.registeredUsersData && event.registeredUsersData.length > 0) { %>
+            <h3>Registered Students:</h3>
+            <ul>
+              <% event.registeredUsersData.forEach(user => { %>
+                <li>
+                  <p><strong>Name:</strong> <%= user.name %></p>
+                  <p><strong>Email:</strong> <%= user.email %></p>
+                  
+                </li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <p>No students registered yet.</p>
+          <% } %>
+          
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>

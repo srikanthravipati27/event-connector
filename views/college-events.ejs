@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>College Events</title>
+  <link rel="stylesheet" href="/css/college-events.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/contact">Contact Us</a>
+      <a href="/profile">Profile</a>
+      <a href="/signout">Sign Out</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h1>College Events</h1>
+    <ul>
+      <% events.forEach(event => { %>
+        <li>
+          <h2><%= event.name %></h2>
+          <p>Type: <%= event.type %></p>
+          <p>Subject: <%= event.subject %></p>
+          <p>Location: <%= event.location %></p>
+          <p>Eligibility: <%= event.eligibility %></p>
+          <p>Registration Fee: <%= event.registrationfee %></p>
+          <p>Prizes: <%= event.prizes %></p>
+          <p>Date: <%= new Date(event.date).toLocaleDateString() %></p>
+          <p>Description: <%= event.description %></p>
+          
+          <% if (event.registeredUsersData && event.registeredUsersData.length > 0) { %>
+            <h3>Registered Students</h3>
+            <ul>
+              <% event.registeredUsersData.forEach(user => { %>
+                <li>
+                  <p>Name: <%= user.name %></p>
+                  <p>Email: <%= user.email %></p>
+                 
+                </li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <p>No students registered yet.</p>
+          <% } %>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>

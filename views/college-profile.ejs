@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Profile</title>
+  <link rel="stylesheet" href="/css/college-profile.css">
+</head>
+<body>
+  <header>
+    <h1>College Profile</h1>
+  </header>
+  <main>
+    <section class="profile-info">
+      <p><strong>Email:</strong> <%= college.email %></p>
+      <p><strong>Name:</strong> <%= college.name %></p>
+      <% if (college) { %>
+        <p><strong>College Name:</strong> <%= college.name %></p>
+        <p><strong>College Location:</strong> <%= college.location %></p>
+        <p><strong>College Established:</strong> <%= college.established %></p>
+      <% } else { %>
+        <p>No college details available.</p>
+      <% } %>
+    </section>
+  </main>
+</body>
+</html>

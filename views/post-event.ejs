@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post an Event</title>
+  <link rel="stylesheet" href="/css/post-event.css">
+</head>
+<body>
+  <header>
+    <h1>Post an Event</h1>
+  </header>
+  <main>
+    <form action="/post-event" method="POST">
+      <label for="name">Event Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="type">Event Type:</label>
+      <input type="text" id="type" name="type" required>
+      
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+      
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required>
+      
+      <label for="eligibility">Eligibility:</label>
+      <input type="text" id="eligibility" name="eligibility" required>
+      
+      <label for="registrationfee">Registration Fee:</label>
+      <input type="text" id="registrationfee" name="registrationfee">
+      
+      <label for="prizes">Prizes:</label>
+      <input type="text" id="prizes" name="prizes">
+      
+      <label for="eventdate">Event Date:</label>
+      <input type="date" id="eventdate" name="eventdate" required>
+      
+      <label for="description">Event Description:</label>
+      <textarea id="description" name="description" required></textarea>
+      
+      <button type="submit">Post Event</button>
+    </form>
+  </main>
+</body>
+</html>

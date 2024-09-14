@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Sign Up</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/college-signup.css">
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>College Sign Up</h1>
+    <form id="college-signup-form" action="/college-signup" method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="text" name="collegeName" placeholder="College Name" required>
+      <button type="submit">Sign Up</button>
+      <p class="login-link">Already have an account? <a href="/college-login">Login</a></p>
+    </form>
+  </div>
+  
+  
+  <footer>
+    <p>&copy; 2024 Event Connector. All Rights Reserved.</p>
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </footer>
+
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

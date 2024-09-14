@@ -1,0 +1,161 @@
+
+body, h1, h2, h3, p, ul, li, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3d4265;
+  color: #fff;
+  padding: 1px 10px;
+  text-align: right;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+header nav {
+  margin-top: 1px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 1em;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+#container {
+  display: flex;
+  margin: 20px;
+}
+
+
+aside {
+  width: 250px;
+  background-color: #7e9dbc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+aside h2 {
+  font-size: 1.5em;
+  color: #021203;
+  margin-bottom: 15px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+aside ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+aside ul li a:hover {
+  color: #031104;
+}
+
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+
+section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+section p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+#top-performers ul {
+  list-style: none;
+  padding: 0;
+}
+
+#top-performers li {
+  margin-bottom: 20px;
+}
+
+#top-performers h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+#top-performers p {
+  font-size: 1em;
+  color: #666;
+}
+
+
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
